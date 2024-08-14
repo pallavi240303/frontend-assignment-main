@@ -3,6 +3,7 @@ import ActionMenu from "./ActionMenu";
 import PriceDisplay from "../components/PriceDisplay";
 import { getCoinsData } from "./CoinDataFetcher";
 import Statistics from "./Statistics";
+import Summary from "./Summary";
 
 export default function TabBar() {
   const [toggle, setToggle] = useState(null);  // Default to Summary tab
@@ -67,13 +68,13 @@ export default function TabBar() {
         <div className="line"></div>
 
         <div className={toggle === 1 ? "show-content" : "tab-content"}>
-          Summary
+        {toggle === 1 && <Summary/>}
         </div>
         <div className={toggle === 2 ? "show-content" : "tab-content"}>
           {toggle === 2 && <ActionMenu setCoinData={setCoinData} />}
         </div>
         <div className={toggle === 3 ? "show-content" : "tab-content"}>
-        {toggle === 2 && <Statistics/>}
+          {toggle === 3 && <Statistics/>}
         </div>
         <div className={toggle === 4 ? "show-content" : "tab-content"}>
           Analysis
