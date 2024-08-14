@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: CircularStd;
+  
+}
+
+
+/*tab menu */
+.tab-container{
+  align-items: left;
+  width: 100%;
+  height: 43px;
+  margin-top: 40px;
+  padding-left: 29px;
+  position: relative;
+  border-bottom: 1px solid #EFF1F3;
+}
+
+.tab-btn1{
+  
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.77px;
+  color: #6F7177;
+  border-bottom: none;
+}
+.tab-btn{
+  margin-left: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  height: 43px;
+  color: #6F7177;
+  border-bottom: none;
+  line-height: 22.77px;
+}
+
+.tab-btn.active {
+  color: #1A243A;
+  border-bottom: 3px solid #4B40EE;
+  border-width: 100%;
+}
+
+
+.usd{
+  color:#BDBEBF;
+  font-size: 24px;
+  vertical-align: super;
+  margin-left: 8px;
+}
+
+.tab-content{
+  display: none;
+}
+.show-content{
+  display: block;
+  margin-top:65px;
+  align-items: start;
+  margin-left: 30px;
+}
+
+
+/* action menu */
+.img{
+  width: 24px;
+  height: 24px;
+}
+.action-container{
+  display:flex;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.77px;
+  color: #6F7177;
+}
+.fs-comp{
+  gap: 31px;
+  display: flex;
+}
+.action-item{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.ciLabel{
+width: 83px;
+height: 23px;
+}
+
+/*Days to compare*/
+.days-btn{
+  padding:5px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.days-btn.active{
+  color: white;
+  background-color: #4B40EE;
+  border-radius: 5px;
+  
+}
+.days-cont{
+  margin-left: 131px;
+}
+
+
+/*price display*/
+.price-display{
+  margin-top: 60px;
+margin-left: 60px;
+
+text-align: left;
+color: #1A243A;
+}
+
+.currentPrice{
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 88.56px;
+  text-align: left;
+  
+}
+.price-positive{
+  color:#67BF6B;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+.price-negative{
+  color:#FF5C5C;
+  font-size: 18px;
+  font-weight: 400;
+
+  text-align: left;
+}
+
+.cont{
+  margin-top: 60px;
+}
+
+.chart-container{
+  margin-top: 28px;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999; 
+  background-color: white;
+  margin-left: 20%;
+  padding:10px;
+}
