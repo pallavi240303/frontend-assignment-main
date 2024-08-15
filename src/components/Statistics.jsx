@@ -4,7 +4,7 @@ import { Table, TableCell, TableContainer, TableHead, TableRow, TableBody } from
 function Statistics() {
   const [coinData, setCoinData] = useState([]);
 
-  // Fetch coin data from an API
+  
   useEffect(() => {
     async function fetchCoinData() {
       try {
