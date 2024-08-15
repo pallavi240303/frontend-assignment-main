@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getCoinsData } from '../components/CoinDataFetcher'; // Importing the getCoinsData function
+import { getCoinsData } from '../components/CoinDataFetcher'; 
 import {  Area, XAxis, YAxis, CartesianGrid, Bar,Tooltip, ComposedChart } from "recharts";
 import fsi from "../assets/fullscreen-icon.png";
 import ci from "../assets/compare-icon.png";
@@ -13,7 +13,7 @@ function ActionMenu({ setCoinData }) {
 
 
   const [cdata, setData] = useState([]);
-  const [activeButton, setActiveButton] = useState(null); // Default to 1 day
+  const [activeButton, setActiveButton] = useState(null); 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [width, setWidth] = useState(800);
   const [height, setHeight] = useState(300);
@@ -33,12 +33,12 @@ function ActionMenu({ setCoinData }) {
     try {
       const data = await getCoinsData(days);
       setCoinData(data);
-      console.log('Fetched Data:', data); // Check the structure of the response
+      console.log('Fetched Data:', data); 
       if (data && data.prices && data.volume) {
         const formattedData = data.prices.map((item, index) => ({
           price: item[1],
           reduced: item[1] * 0.1,
-          volumes: data.volume[index][1] // Mapping volumes data based on the index
+          volumes: data.volume[index][1] 
         }));
         setCurrentPrice(formattedData.at(-1).price);
         setData(formattedData);

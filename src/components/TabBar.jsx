@@ -6,12 +6,12 @@ import Statistics from "./Statistics";
 import Summary from "./Summary";
 
 export default function TabBar() {
-  const [toggle, setToggle] = useState(null);  // Default to Summary tab
+  const [toggle, setToggle] = useState(null); 
   const [coinData, setCoinData] = useState(null);
 
   useEffect(() => {
     const fetchInitialData = async () => {
-      const data = await getCoinsData(1); // Fetch data for 1 day
+      const data = await getCoinsData(1);
       setCoinData(data);
     };
     fetchInitialData();
